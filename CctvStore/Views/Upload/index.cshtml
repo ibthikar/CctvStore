@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CctvStore.Models.Upload>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </th>
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImagePath)
+        </td>
+        
+    </tr>
+}
+
+</table>

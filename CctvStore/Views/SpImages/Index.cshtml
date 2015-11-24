@@ -1,0 +1,196 @@
+﻿@model IEnumerable<CctvStore.Models.SpImage>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Specification.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EffectiveResolution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WhiteBalance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LightCompensation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DigitalZoom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MotionDetection)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrivateMask)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OSDLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Defog)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DigitalImageStable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UTC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VideoCompression)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BitRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AudioCompression)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxResolution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stream)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageSetting)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeWrapping)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HLC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CorridorMode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ROI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EffectivePixel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DVEImageEnhance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageColorMode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoiseReduce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageCorrection)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageOverturn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Specification.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EffectiveResolution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WhiteBalance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LightCompensation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DigitalZoom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MotionDetection)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrivateMask)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OSDLanguage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Defog)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DigitalImageStable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VideoCompression)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BitRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AudioCompression)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxResolution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stream)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageSetting)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeWrapping)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HLC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorridorMode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ROI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EffectivePixel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DVEImageEnhance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageColorMode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoiseReduce)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageCorrection)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageOverturn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SpecificationId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SpecificationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SpecificationId })
+        </td>
+    </tr>
+}
+
+</table>

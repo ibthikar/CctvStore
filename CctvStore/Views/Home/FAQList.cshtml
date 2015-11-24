@@ -1,0 +1,19 @@
+﻿@model IEnumerable<CctvStore.Models.FAQ>
+
+
+<table class="table">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <a href="/Home/FAQDetails?id=item.FAQId "> @Html.DisplayFor(modelItem => item.Question)</a>
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.UploadDate)
+        </td>
+       
+    </tr>
+}
+
+</table>

@@ -1,0 +1,58 @@
+﻿@model CctvStore.Models.Download
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Download</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Version)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Version)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Introduction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Introduction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeaturesfromSDK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeaturesfromSDK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DownloadUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DownloadUrl)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DownloadId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

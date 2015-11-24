@@ -1,0 +1,15 @@
+﻿
+@model IEnumerable<CctvStore.Models.SuccessStory>
+
+
+
+
+@foreach (var item in Model)
+{
+    
+    <li>
+        @Html.ActionLink(item.Stories.ToString(),
+                "Browse", "SuccessStories",
+                new { Succestory = item.Stories.ToString() }, null)
+    </li>
+}

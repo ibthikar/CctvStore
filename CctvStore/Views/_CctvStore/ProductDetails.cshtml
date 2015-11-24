@@ -1,0 +1,77 @@
+﻿@model CctvStore.Models.Product
+<div class="container prdDtlCntnr">
+    <div class="row">
+
+        <div class="col-md-2 lftPrdLnkCvr">
+            <div class="row">
+                <h3 class="lPlnkH3">Products</h3>
+                <ul class="lftPrdMenu">
+                    <li><a href="#">Fisheye Camera</a></li>
+                    <li><a href="#">Network IR</a></li>
+                    <li><a href="#">Pinhole Camera</a></li>
+                    <li><a href="#">Box Camera</a></li>
+                    <li><a href="#">Analogue Bullet</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-10">
+            <div class="col-md-12 prdDtlCntright">
+                <h4>Product Details</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <div class="col-md-12">
+
+                    </div>
+
+                    <div class="col-md-12 prdctDtlCvr">
+                        <dt></dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.UrlProductImage)
+
+                            <img src="~/Content/images/prdct001.png" alt="...">
+                        </dd>
+                        <hr />
+                        <dt>
+                            @Html.DisplayNameFor(model => model.SubCategory.SubCategoryName)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.SubCategory.SubCategoryName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Model)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Model)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ProductName)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.ProductName)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Description)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.UrlProductImage)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.UrlProductImage)
+                        </dd>
+
+                        <div class="col-md-12 prdDlBtmBtnCvr">
+                            <div class="col-md-4 prdDtlBtmBtns" style="text-align:center">@Html.ActionLink("Download", "ProductDownloads", "_cctvstore", new { ProductID = @Model.ProductId }, null)</div>
+                            <div class="col-md-4 prdDtlBtmBtns" style="text-align:center">@Html.ActionLink("Specification", "ProductSpecifications", "_cctvstore", new { ProductID = @Model.ProductId }, null)</div>
+                            <div class="col-md-4 prdDtlBtmBtns" style="text-align:center">@Html.ActionLink("Accessories", "ProductAccessories", "_cctvstore", new { ProductID = @Model.ProductId }, null)</div>
+
+                        </div>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>

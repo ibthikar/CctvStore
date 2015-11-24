@@ -1,0 +1,95 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body, html {font-family: 'Open Sans', sans-serif;}
+.navWrpBg {background:#fff;}
+.logo {float:left; margin:39px 0 28px 0;padding:0;}
+.navBg {background:url(../images/menuBg.jpg) top left repeat-x;margin: 124px 0 0 0;}
+.navbar-nav > li > a {padding-top:10px;padding-bottom:9px; color:#fff;font-family: 'Oswald', sans-serif; font-weight:300; text-transform:uppercase;}
+.navbar-nav > li > a:hover {background:#ff7d00;}
+.cntWrBg {background:#2b2b2b;}
+.mainH3 {font-family: 'Oswald', sans-serif; font-weight:700; width:100%; color:#fff; text-align:center;margin: 40px 0 40px 0;font-size: 35px;float: left;}
+.sldrwrp {background:url(../images/sldrBg.png) top center repeat-x #000;}
+.carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;margin: auto;}
+.carousel {margin: 80px 0;}
+.carousel-control {width: 8%;}
+.cstmrSprt {background:url(../images/icn_001.png) top center no-repeat;height:160px;}
+.cctvcmra {background:url(../images/icn_002.png) top center no-repeat;height:160px;}
+.fststinstl {background:url(../images/icn_003.png) top center no-repeat;height:160px;}
+.lbl1 {width: 100%;text-align: center;color: #ADADAD;font-size: 22px;font-weight:400;margin: 10px 0 30px 0; text-transform:uppercase;}
+.cntWrBg2 {background:#000; padding-bottom:60px;}
+.fprdcBg {background:url(../images/prdctBg.jpg) center; overflow:hidden; text-align:center;padding:50px 0;}
+.lbl2 { width:100%; margin:0; padding:10px 0; text-align:center; color:#ff7a06; font-size:16px;background: #fff;}
+.prdcRwmrgn {margin-bottom:30px;}
+/*font-family: 'Open Sans', sans-serif;*/
+.ftrBg {background:url(../images/footerBg.jpg) top center; padding-top:30px; padding-bottom:30px;}
+.socialWrap {margin: 5px auto;position: relative;overflow: hidden; float:right;}
+
+.ftrmenu {margin:20px 0; padding:0; height:20px;}
+.ftrmenu li {float:left; padding:0 10px 0 0; list-style:none;}
+.ftrmenu li a {text-decoration:none; color:#B1B1B1;}
+.ftrmenu li a:hover {color:#fff;}
+.cprt {width:100%; text-align:center;float:left;}
+
+.prdctCntnr {margin-top:30px;}
+.jmbtrnStl {background:#fff; border-radius:0 !important; margin-bottom:30px;}
+.prdcCvr {min-height:510px;}
+.prdctBtnCvr {text-align:center;padding-top: 5px;padding-bottom: 5px; text-transform:uppercase;}
+.prdctBtnCvr > a {color:#fff;}
+.prdctBtnCvr > a:hover {color:#000; text-decoration:none;}
+.prdBtnCv1 {background:#ffb87b;}
+.prdBtnCv2 {background:#ff9437;}
+.prdBtnCv3 {background:#ff7a06;}
+.prdMnHead {font-weight:bold; text-align:center; color:#ff7a06;}
+.prdDscp {font-size: 15px !important;line-height: 29px !important;text-align: center;height: 90px; overflow: hidden;}
+.prdImgLnk {text-align: center;float: left;width: 100%;margin: 50px 0 30px 0;}
+.spcfHdng {color:#fff; text-align:center;}
+.panel  {border-radius:0 !important;border:none;}
+.panel-heading {border-radius:0 !important; background:#ff7a06 !important; border:none; color:#fff !important;}
+.lftPrdLnkCvr {background: #fff;padding-bottom: 15px;}
+.lPlnkH3 {margin: 0 0 15px 0;color: #fff;background: #FF7A25; text-transform:uppercase;font-size: 17px; padding: 10px;}
+ul.lftPrdMenu {list-style:none;list-style: none;padding: 0 20px;margin: 0;}
+ul.lftPrdMenu li a {color:#000;margin: 5px 0;    float: left;}
+
+.dropdown-menu { display:none; }
+.dropdown:hover .dropdown-menu{ display: block; }
+
+.mndrpdwn {width:700px; min-width:initial;left: -190px !important;}
+.drpdwnh4 {color: #FF7A25;font-weight: bold;}
+.drpdnMenu {padding: 0;    list-style: none;    margin: 0 0 10px 0;}
+.drpdnMenu li {margin: 8px 0;}
+.drpdnMenu li a {color:#000;}
+.drpdnMenu li a:hover {font-weight:bold;}
+.cntnrCvr {margin-bottom:50px; margin-top:50px;}
+.cntntstlP {color:#fff; line-height:32px; font-size:14px;text-indent: 90px;}
+.addrsH2 {color:#fff;}
+.addrsp {font-size: 14px;font-weight: 200;line-height: 33px;color:#fff;}
+.usMap {width: 100%;float: left;min-height: 250px;margin: 0;padding: 0;background: url('../images/usaMap.jpg') center;}
+.koreaMap {width: 100%;float: left;min-height: 250px;margin: 0;padding: 0;background: url('../images/koreaMap.jpg') center;}
+.cntctinpt {width:100%; max-width:100%;    padding: 12px; margin-bottom: 30px;}
+.cnttxtara {min-height:150px;}
+.cntusbtn {background:#ff7a06; padding:10px 80px; border:none;color: #fff;}
+
+.prdDtlCntnr {margin-top:20px; margin-bottom:20px; }
+.prdDtlCntright {background:#fff;}
+.prdDlBtmBtnCvr {margin-bottom: 40px; margin-top: 40px;}
+.prdDtlBtmBtns > a {background: #FF7D00;color: #fff; padding: 5px 20px;}
+.prdctDtlCvr > dt {    text-align: left !important;line-height: 35px;}
+.prdctDtlCvr > dd {line-height: 35px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

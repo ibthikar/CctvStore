@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CctvStore.Models.Support>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UploadDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DownloadUrl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UploadDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DownloadUrl)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DownloadId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DownloadId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DownloadId })
+        </td>
+    </tr>
+}
+
+</table>

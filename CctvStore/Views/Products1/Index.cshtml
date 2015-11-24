@@ -1,0 +1,54 @@
+﻿@model IEnumerable<CctvStore.Models.Product>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SubCategory.SubCategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UrlProductImage)
+            </th>
+            <th></th>
+        </tr>
+       
+            @foreach (var item in Model)
+            {
+                <tr >
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubCategory.SubCategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UrlProductImage)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ProductId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ProductId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ProductId })
+                    </td>
+                </tr>
+                <tr class="well">
+
+                    <td class="col-md-4">@Html.ActionLink("Download", "Create", "Products", new { id = item.ProductId })</td>
+                    <td class="col-md-4">@Html.ActionLink("Specification", "HomeSpecification", "Home")</td>
+                    <td class="col-md-4">@Html.ActionLink("Accessories", "Index", "Accessories")</td>
+
+                </tr>
+            }
+        
+</table>

@@ -1,0 +1,249 @@
+﻿@model CctvStore.Models.SpImage
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SpImage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Specification.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specification.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EffectiveResolution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EffectiveResolution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhiteBalance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhiteBalance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LightCompensation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LightCompensation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DigitalZoom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DigitalZoom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotionDetection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotionDetection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrivateMask)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrivateMask)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OSDLanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OSDLanguage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Defog)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Defog)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DigitalImageStable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DigitalImageStable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VideoCompression)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VideoCompression)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BitRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BitRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AudioCompression)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AudioCompression)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxResolution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxResolution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stream)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stream)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageSetting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageSetting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeWrapping)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeWrapping)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HLC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HLC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CorridorMode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorridorMode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ROI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ROI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EffectivePixel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EffectivePixel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DVEImageEnhance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DVEImageEnhance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageColorMode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageColorMode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoiseReduce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiseReduce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageCorrection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageCorrection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageOverturn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageOverturn)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

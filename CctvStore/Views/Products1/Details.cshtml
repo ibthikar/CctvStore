@@ -1,0 +1,58 @@
+﻿@model CctvStore.Models.Product
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SubCategory.SubCategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubCategory.SubCategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlProductImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrlProductImage)
+        </dd>
+
+    </dl>
+</div>
+<div class="well">
+    <div class="col-md-4">@Html.ActionLink("Download", "ProductDownloads", "_cctvstore", new { ProductID =@Model.ProductId})</div>
+    <div class="col-md-4">@Html.ActionLink("Specification", "ProductSpecifications", "_cctvstore", new { ProductID = @Model.ProductId })</div>
+    <div class="col-md-4">@Html.ActionLink("Accessories", "ProductAccessories", "_cctvstore", new { ProductID = @Model.ProductId })</div>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,52 @@
+﻿@using CctvStore.ViewModel;
+@model CctvStore.ViewModel.CatalogCategoryVM
+
+@foreach (var item in Model.Catalogs)
+{
+    <div>
+        @Html.ActionLink(item.CatalogName, "ProductList", "_CctvStore", new { Categoriesstring = item.CatalogName }, null)
+    </div>
+}
+@if(Model.Category!= null)
+{   
+    <h1>Hai am Category</h1>
+    foreach (var item in Model.Category)
+    {
+        string selectedRow = "";
+        if (item.CategoryName == ViewBag.category)
+        {
+            selectedRow = "success";
+        }
+        <div class="@selectedRow">
+            @Html.ActionLink(item.CategoryName, "ProductList", "_CctvStore", new { SubCategoriesstring = item.CategoryName}, null)
+        </div>
+    }
+}
+
+@if (Model.SubCategory != null)
+{ 
+    <h4>SubCategory</h4>
+    foreach (var item in Model.SubCategory)
+    {
+        //string selectedRow1 = "";
+        //if (item.SubCategoryName == ViewBag.subcategory)
+        //{
+        //    selectedRow1 = "success";
+        //}
+        <div>            
+           @Html.ActionLink(item.SubCategoryName, "ProductList", "_CctvStore", new { ProductString = item.SubCategoryName }, null)
+        </div>
+    }
+}
+
+@if(Model.Product != null)
+{
+    <h4>Products</h4>
+    foreach(var item in Model.Product)
+    {
+        <div>
+            @item.ProductName
+
+        </div>
+    }
+}

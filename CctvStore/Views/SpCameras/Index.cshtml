@@ -1,0 +1,172 @@
+﻿@model IEnumerable<CctvStore.Models.SpCamera>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Specification.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageSensor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MinIllumination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DayNight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShutterSpeed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AutoIris)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WideDynamicRange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DigitalNoiseReduction)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lens)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FOV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IRLED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IRRange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SignalSystem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DetecterType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArrayFormal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PixelPitch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sensitivity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpecteralRange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TemperatureDetection)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Focus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DetectDistanceVehicle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DetectDistanceHumen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecognizeDistance)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Specification.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageSensor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MinIllumination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DayNight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShutterSpeed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AutoIris)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WideDynamicRange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DigitalNoiseReduction)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lens)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FOV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IRLED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IRRange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SignalSystem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DetecterType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArrayFormal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PixelPitch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sensitivity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpecteralRange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TemperatureDetection)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Focus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DetectDistanceVehicle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DetectDistanceHumen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecognizeDistance)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SpecificationId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SpecificationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SpecificationId })
+        </td>
+    </tr>
+}
+
+</table>

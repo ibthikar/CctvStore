@@ -1,0 +1,59 @@
+﻿@model CctvStore.Models.SpVideo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SpVideo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Specification.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specification.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VideoCompression)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VideoCompression)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EncodeAbility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EncodeAbility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DecodeAbility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DecodeAbility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VideoInput)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VideoInput)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SpecificationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

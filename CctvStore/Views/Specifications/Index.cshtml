@@ -1,0 +1,106 @@
+﻿@model IEnumerable<CctvStore.Models.Specification>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.SpAudio.AudioCompression)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpCamera.ImageSensor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpGeneral.PowerSupply)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpHardDisk.SATAHDD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpImage.EffectiveResolution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpInterface.Ethernet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpNetwork.NetworkProtocols)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpRecordPlayback.HardDrive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpVideo.VideoCompression)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpVideoAudioInput.VideoInput)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpVideoAudioOutput.RecordingResolution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Product.ProductName)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.SpAudio.AudioCompression)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpCamera.ImageSensor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpGeneral.PowerSupply)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpHardDisk.SATAHDD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpImage.EffectiveResolution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpInterface.Ethernet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpNetwork.NetworkProtocols)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpRecordPlayback.HardDrive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpVideo.VideoCompression)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpVideoAudioInput.VideoInput)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpVideoAudioOutput.RecordingResolution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SpecificationId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SpecificationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SpecificationId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,123 @@
+﻿@model CctvStore.Models.Specification
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Specification</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpAudio.AudioCompression)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpAudio.AudioCompression)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpCamera.ImageSensor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpCamera.ImageSensor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpGeneral.PowerSupply)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpGeneral.PowerSupply)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpHardDisk.SATAHDD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpHardDisk.SATAHDD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpImage.EffectiveResolution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpImage.EffectiveResolution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpInterface.Ethernet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpInterface.Ethernet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpNetwork.NetworkProtocols)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpNetwork.NetworkProtocols)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpRecordPlayback.HardDrive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpRecordPlayback.HardDrive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpVideo.VideoCompression)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpVideo.VideoCompression)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpVideoAudioInput.VideoInput)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpVideoAudioInput.VideoInput)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpVideoAudioOutput.RecordingResolution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpVideoAudioOutput.RecordingResolution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SpecificationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

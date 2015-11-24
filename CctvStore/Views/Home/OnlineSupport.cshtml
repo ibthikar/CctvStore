@@ -1,0 +1,28 @@
+﻿@model IEnumerable<CctvStore.Models.Support>
+
+@{
+    ViewBag.Title = "Download Files";
+}
+
+<h2>@ViewBag.DownloadType</h2>
+
+<table class="table">
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+              @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.UploadDate)
+            </td>
+          
+           
+        </tr>
+    }
+
+</table>

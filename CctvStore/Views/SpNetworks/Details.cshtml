@@ -1,0 +1,99 @@
+﻿@model CctvStore.Models.SpNetwork
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SpNetwork</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Specification.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specification.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NetworkProtocols)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NetworkProtocols)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlarmTrigger)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlarmTrigger)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTSPVideo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTSPVideo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Security)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Security)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WebLanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WebLanguage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SystemCompatibility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SystemCompatibility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NetworkInterface)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NetworkInterface)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POEInterface)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POEInterface)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POEMaxPower)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POEMaxPower)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SpecificationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

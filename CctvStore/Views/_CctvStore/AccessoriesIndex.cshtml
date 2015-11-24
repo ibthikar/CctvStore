@@ -1,0 +1,14 @@
+﻿@model IEnumerable<CctvStore.Models.Accessories>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@foreach (var item in Model)
+{
+    @Html.DisplayFor(modelItem => item.UrlImageAccessory)
+    @Html.DisplayFor(modelItem => item.Title)
+    @Html.DisplayFor(modelItem => item.Product.ProductName)
+  
+}

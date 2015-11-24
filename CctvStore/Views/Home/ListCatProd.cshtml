@@ -1,0 +1,61 @@
+﻿@using CctvStore.Models;
+@{
+    var listCatalog = (List<Catalog>)ViewBag.Listcatalog;
+    var listCatagory = (List<Category>)ViewBag.ListCatagory;
+
+}
+<li class="dropdown">
+    @Html.ActionLink("ProductList", "ProductIndex", "_CctvStore", new { area = "" }, null)
+    <div class="dropdown-menu mndrpdwn">
+@if (ViewBag.Listcatalog != null)
+    {
+        foreach (var catalog in listCatalog)
+        {
+        <div class="col-md-4">
+            <h4 class="drpdwnh4">@catalog.CatalogName</h4>
+            @if (ViewBag.ListCatagory != null && listCatagory != null)
+            {
+                <ul class="drpdnMenu">
+                    @foreach (var item in listCatagory)
+                    {
+                        if (item.CatalogId == catalog.CatalogId)
+                        {
+                            <li><a href="/_CctvStore/ProductIndex?SearchCategories=@item.CategoryName">@item.CategoryName</a></li>
+
+                        }
+                    }
+                </ul>
+            }
+
+        </div>
+}
+}
+        @*<div class="col-md-4">
+            <h4 class="drpdwnh4">Camera 2</h4>
+            <ul class="drpdnMenu">
+                <li><a href="#">Intelligent Camera</a></li>
+                <li><a href="#">Intelligent Camera Lite</a></li>
+                <li><a href="#">Super WDR Series</a></li>
+                <li><a href="#">High Speed Dome</a></li>
+                <li><a href="#">Efficiency Series</a></li>
+                <li><a href="#">Pinhole Camera</a></li>
+                <li><a href="#">Classic TI</a></li>
+                <li><a href="#">Soho Series</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-4">
+            <h4 class="drpdwnh4">Camera 3</h4>
+            <ul class="drpdnMenu">
+                <li><a href="#">Intelligent Camera</a></li>
+                <li><a href="#">Intelligent Camera Lite</a></li>
+                <li><a href="#">Super WDR Series</a></li>
+                <li><a href="#">High Speed Dome</a></li>
+                <li><a href="#">Efficiency Series</a></li>
+                <li><a href="#">Pinhole Camera</a></li>
+                <li><a href="#">Classic TI</a></li>
+                <li><a href="#">Soho Series</a></li>
+            </ul>
+        </div>*@
+    </div>
+</li>

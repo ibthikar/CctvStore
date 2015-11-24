@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CctvStore.Models.Download>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Version)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Introduction)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FeaturesfromSDK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DownloadUrl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Version)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Introduction)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FeaturesfromSDK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DownloadUrl)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DownloadId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DownloadId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DownloadId })
+        </td>
+    </tr>
+}
+
+</table>

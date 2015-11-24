@@ -1,0 +1,24 @@
+﻿@model IEnumerable<CctvStore.Models.SubCategory>
+<ul>
+    @foreach (var catalog in Model)
+    {
+        <li>
+            @catalog.Category.Catalog.CatalogName
+        </li>
+        @*foreach (var catgry in Model)
+        {
+            <li>
+                @catgry.Category.CategoryName
+            </li>
+            foreach(var subcatgry in Model)
+            {
+                <li>
+                    @subcatgry.SubCategoryName
+                </li>
+            }
+        }*@
+
+    }
+</ul>
+
+

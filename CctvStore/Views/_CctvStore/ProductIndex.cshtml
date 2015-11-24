@@ -1,0 +1,138 @@
+﻿@model IEnumerable<CctvStore.Models.Product>
+@using CctvStore.Models;
+
+@*<table class="table">
+        <tr>
+            <th>
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubCategory.SubCategoryName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+                {
+            <tr>
+                <td>
+                    image
+                    @Html.DisplayFor(modelItem => item.UrlProductImage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubCategory.SubCategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+            </tr>
+                    <tr class="well">
+
+                        <td class="col-md-4">@Html.ActionLink("Download", "Create", "Products", new { id = item.ProductId })</td>
+                        <td class="col-md-4">@Html.ActionLink("Specification", "HomeSpecification", "Home")</td>
+                        <td class="col-md-4">@Html.ActionLink("Accessories", "Index", "Accessories")</td>
+
+                    </tr>
+        }
+
+    </table>*@
+@{
+    var listCatalog = (List<Catalog>)ViewBag.Listcatalog;
+    var listCatagory = (List<Category>)ViewBag.ListCatagory;
+
+}
+<div class="container prdctCntnr">
+    <div class="row">
+        <div class="col-md-2 lftPrdLnkCvr">
+            <div class="row">
+                <h3 class="lPlnkH3">Products</h3>
+                <ul class="lftPrdMenu">
+
+
+
+                    
+
+                        @*@if (ViewBag.Listcatalog != null)
+                        {
+                            foreach (var catalog in listCatalog)
+                            {
+
+                            <li>
+                                <a href="/_CctvStore/ProductIndex?SearchCatalog=@catalog.CategoryName">
+                                    @catalog.CatalogName
+                                </a>
+                            
+                            @if (ViewBag.ListCatagory != null && listCatagory != null)
+                            {
+                                <ul>
+                                    @foreach (var item in listCatagory)
+                                    {
+                                        if (item.CatalogId == catalog.CatalogId)
+                                        {
+                                            <li><a href="/_CctvStore/ProductIndex?SearchCategories=@item.CategoryName">@item.CategoryName</a></li>
+
+                                        }
+                                    }
+                                </ul>
+                            }
+
+                            </li>
+                            }
+                        }*@
+                    
+
+                        <li><a href="#">Fisheye Camera</a></li>
+                        <li><a href="#">Network IR</a></li>
+                        <li><a href="#">Pinhole Camera</a></li>
+                        <li><a href="#">Box Camera</a></li>
+                        <li><a href="#">Analogue Bullet</a></li>
+                    </ul>
+
+            </div>
+        </div>
+        <div class="col-md-10">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 prdcCvr">
+                    <div class="col-md-12 jmbtrnStl">
+                        <div class="media">
+                            <div class="col-md-12">
+                                <a href="#" class="prdImgLnk">
+                                    @Html.DisplayFor(modelItem => item.UrlProductImage)
+
+                                    <img src="~/Content/images/prdct001.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="col-md-12">
+                                <h4 class="media-heading prdMnHead"><a href="~/_CctvStore/ProductDetails?ProductID=@item.ProductId">@Html.DisplayFor(modelItem => item.ProductName)</a></h4>
+                                <p class="prdDscp">
+                                    @Html.DisplayFor(modelItem => item.Model)
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 prdctBtnCvr prdBtnCv1">@Html.ActionLink("Download", "Index", "Products", new { id = item.ProductId })</div>
+                            <div class="col-md-12 prdctBtnCvr prdBtnCv2">@Html.ActionLink("Specification", "SpecificationIndex", "_CctvStore", new { ids = item.ProductId }, null)</div>
+                            <div class="col-md-12 prdctBtnCvr prdBtnCv3">@Html.ActionLink("Accessories", "Index", "Accessories", new { idd = item.ProductId }, null)</div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<CctvStore.Models.ProductDownloads>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new {ProductId=ViewBag.PID })
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.FileName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileUrl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.FileName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileUrl)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductDownloadId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductDownloadId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductDownloadId })
+        </td>
+    </tr>
+}
+
+</table>

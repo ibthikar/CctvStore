@@ -1,0 +1,45 @@
+﻿using System.Web.Mvc.Html;
+@model IEnumerable<CctvStore.Models.SuccessStory>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+@{Html.RenderAction("SuccesStoryMenu", "SuccessStories");}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stories)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SuccessStoryUrl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stories)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SuccessStoryUrl)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SuccessStoryId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SuccessStoryId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SuccessStoryId })
+        </td>
+    </tr>
+}
+
+</table>

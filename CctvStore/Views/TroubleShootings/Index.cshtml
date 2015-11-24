@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CctvStore.Models.TroubleShooting>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ErrorTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ErrorDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ErrorUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ErrorTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ErrorDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ErrorUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCreated)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TroubleShootingId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TroubleShootingId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TroubleShootingId })
+        </td>
+    </tr>
+}
+
+</table>

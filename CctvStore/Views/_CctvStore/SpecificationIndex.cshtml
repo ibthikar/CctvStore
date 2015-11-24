@@ -1,0 +1,910 @@
+﻿
+@model IEnumerable<CctvStore.Models.Specification>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpAudio.AudioCompression)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpCamera.ImageSensor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpGeneral.PowerSupply)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpHardDisk.SATAHDD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpImage.EffectiveResolution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpInterface.Ethernet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpNetwork.NetworkProtocols)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpRecordPlayback.HardDrive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpVideo.VideoCompression)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpVideoAudioInput.VideoInput)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpVideoAudioOutput.RecordingResolution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpAudio.AudioCompression)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpCamera.ImageSensor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpGeneral.PowerSupply)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpHardDisk.SATAHDD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpImage.EffectiveResolution)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpInterface.Ethernet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpNetwork.NetworkProtocols)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpRecordPlayback.HardDrive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpVideo.VideoCompression)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpVideoAudioInput.VideoInput)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpVideoAudioOutput.RecordingResolution)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.SpecificationId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.SpecificationId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.SpecificationId })
+            </td>
+        </tr>
+    }
+
+</table>*@
+
+@foreach (var item in Model)
+{
+    <h2>
+        @Html.DisplayFor(modelItem => item.Product.ProductName)
+    </h2>
+    <h4>
+        @Html.DisplayFor(modelItem => item.Product.Model)
+    </h4>
+
+      <!-- Camerta -->
+    if (item.SpCamera != null)
+    {
+        <div class="panel  panel-primary">
+            <div class="panel-heading">Camera</div>
+            <div class="panel-body">
+                <p>...</p>
+            </div>
+            <!-- Table -->
+            <table class="table table-bordered  table-hover">
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.ImageSensor)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.ImageSensor)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.MinIllumination)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.MinIllumination)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.DayNight)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.DayNight)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.ShutterSpeed)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.ShutterSpeed)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.AutoIris)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.AutoIris)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.WideDynamicRange)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.WideDynamicRange)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.DigitalNoiseReduction)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.DigitalNoiseReduction)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.Lens)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.Lens)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.FOV)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.FOV)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.IRLED)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.IRLED)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.IRRange)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.IRRange)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.SN)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.SN)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.SignalSystem)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.SignalSystem)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.DetecterType)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.DetecterType)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.ArrayFormal)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.ArrayFormal)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.PixelPitch)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.PixelPitch)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.Sensitivity)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.Sensitivity)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.SpecteralRange)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.SpecteralRange)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.TemperatureDetection)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.TemperatureDetection)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.Focus)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.Focus)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.DetectDistanceVehicle)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.DetectDistanceVehicle)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.DetectDistanceHumen)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.DetectDistanceHumen)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpCamera.RecognizeDistance)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpCamera.RecognizeDistance)</td>
+                </tr>
+            </table>
+        </div>
+   }
+
+
+     <!-- IMage -->
+    if (item.SpImage != null)
+    {
+        <div class="panel panel-success">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Image</div>
+            <div class="panel-body">
+                <p>...</p>
+            </div>
+
+            <!-- Table -->
+            <table class="table table-bordered  table-hover">
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.EffectiveResolution)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.EffectiveResolution)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.WhiteBalance)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.WhiteBalance)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.Gain)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.Gain)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.LightCompensation)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.LightCompensation)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.DigitalZoom)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.DigitalZoom)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.MotionDetection)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.MotionDetection)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.PrivateMask)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.PrivateMask)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.OSDLanguage)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.OSDLanguage)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.Defog)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.Defog)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.DigitalImageStable)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.DigitalImageStable)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.UTC)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.UTC)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.VideoCompression)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.VideoCompression)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.BitRate)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.BitRate)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.AudioCompression)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.AudioCompression)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.MaxResolution)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.MaxResolution)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.Stream)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.Stream)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.ImageSetting)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.ImageSetting)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.DeWrapping)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.DeWrapping)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.HLC)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.HLC)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.CorridorMode)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.CorridorMode)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.ROI)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.ROI)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.EffectivePixel)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.EffectivePixel)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.ImageColorMode)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.ImageColorMode)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.DVEImageEnhance)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.DVEImageEnhance)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.NoiseReduce)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.NoiseReduce)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.ImageCorrection)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.ImageCorrection)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpImage.ImageOverturn)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpImage.ImageOverturn)</td>
+                </tr>
+            </table>
+        </div>
+    }
+
+       <!-- Network -->
+    if (item.SpNetwork != null)
+   {
+        <div class="panel panel-info">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Network</div>
+            <div class="panel-body">
+                <p>...</p>
+            </div>
+
+            <!-- Table -->
+            <table class="table table-bordered  table-hover">
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpNetwork.NetworkProtocols)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpNetwork.NetworkProtocols)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpNetwork.AlarmTrigger)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpNetwork.AlarmTrigger)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpNetwork.RTSPVideo)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpNetwork.RTSPVideo)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpNetwork.Security)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpNetwork.Security)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpNetwork.WebLanguage)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpNetwork.WebLanguage)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpNetwork.SystemCompatibility)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpNetwork.SystemCompatibility)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpNetwork.NetworkInterface)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpNetwork.NetworkInterface)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpNetwork.POEInterface)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpNetwork.POEInterface)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpNetwork.POEMaxPower)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpNetwork.POEMaxPower)</td>
+                </tr>
+            </table>
+        </div>
+    }
+
+
+         <!-- Interface -->
+    if (item.SpInterface != null)
+   {
+        <div class="panel panel-warning">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Interface</div>
+            <div class="panel-body">
+                <p>...</p>
+            </div>
+
+            <!-- Table -->
+            <table class="table table-bordered  table-hover">
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpInterface.Ethernet)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpInterface.Ethernet)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpInterface.AudioIO)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpInterface.AudioIO)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpInterface.AlarmIO)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpInterface.AlarmIO)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpInterface.RS485)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpInterface.RS485)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpInterface.BNCOutput)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpInterface.BNCOutput)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpInterface.ResetButton)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpInterface.ResetButton)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpInterface.EdgeStorage)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpInterface.EdgeStorage)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpInterface.Output)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpInterface.Output)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpInterface.PTZControl)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpInterface.PTZControl)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpInterface.Network)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpInterface.Network)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpInterface.USB)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpInterface.USB)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpInterface.HDMIVGA)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpInterface.HDMIVGA)</td>
+                </tr>
+            </table>
+        </div>
+    }
+
+     <!-- SpRecordPlayback -->
+    if (item.SpRecordPlayback != null)
+    {
+        <div class="panel panel-danger">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Record Playback</div>
+            <div class="panel-body">
+                <p>...</p>
+            </div>
+
+            <!-- Table -->
+            <table class="table table-bordered  table-hover">
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpRecordPlayback.HardDrive)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpRecordPlayback.HardDrive)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpRecordPlayback.Record)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpRecordPlayback.Record)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpRecordPlayback.PlayBack)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpRecordPlayback.PlayBack)</td>
+                </tr>              
+            </table>
+        </div>
+    }
+
+      <!-- Video -->
+    if (item.SpVideo != null)
+    {
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">SpVideo</div>
+            <div class="panel-body">
+                <p>...</p>
+            </div>
+
+            <!-- Table -->
+            <table class="table table-bordered  table-hover">
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideo.VideoCompression)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideo.VideoCompression)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideo.EncodeAbility)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideo.EncodeAbility)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideo.DecodeAbility)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideo.DecodeAbility)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideo.VideoInput)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideo.VideoInput)</td>
+                </tr>
+            </table>
+        </div>
+   }
+
+           <!-- Video/Audio Input -->
+   if (item.SpVideoAudioInput != null)
+    {
+        <div class="panel panel-success">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Video/Audio Input</div>
+            <div class="panel-body">
+                <p>...</p>
+            </div>
+
+            <!-- Table -->
+            <table class="table table-bordered  table-hover">
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideoAudioInput.VideoInput)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideoAudioInput.VideoInput)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideoAudioInput.IncomingBandwidth)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideoAudioInput.IncomingBandwidth)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideoAudioInput.OutgoingChannel)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideoAudioInput.OutgoingChannel)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideoAudioInput.AudioInput)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideoAudioInput.AudioInput)</td>
+                </tr>
+          
+            </table>
+        </div>
+    }
+
+          <!-- Video/Audio Output -->
+    if (item.SpVideoAudioOutput != null)
+    {
+        <div class="panel panel-info">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Video/Audio Output</div>
+            <div class="panel-body">
+                <p>...</p>
+            </div>
+
+            <!-- Table -->
+            <table class="table table-bordered  table-hover">
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideoAudioOutput.RecordingResolution)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideoAudioOutput.RecordingResolution)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideoAudioOutput.FrameRate)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideoAudioOutput.FrameRate)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideoAudioOutput.LiveviewPlaybackResolution)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideoAudioOutput.LiveviewPlaybackResolution)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideoAudioOutput.LiveviewPlaybackCapacity)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideoAudioOutput.LiveviewPlaybackCapacity)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideoAudioOutput.HDMIVGA)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideoAudioOutput.HDMIVGA)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpVideoAudioOutput.AudioOutput)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpVideoAudioOutput.AudioOutput)</td>
+                </tr>
+            </table>
+        </div>
+    }
+
+       <!-- Hardisk -->
+    if (item.SpHardDisk != null)
+    {
+        <div class="panel panel-warning">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Hardisk</div>
+            <div class="panel-body">
+                <p>...</p>
+            </div>
+            <!-- Table -->
+            <table class="table table-bordered  table-hover">
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpHardDisk.SATAHDD)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpHardDisk.SATAHDD)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpHardDisk.MountingMode)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpHardDisk.MountingMode)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpHardDisk.Cpacity)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpHardDisk.Cpacity)</td>
+                </tr>
+            </table>
+        </div>
+    }
+
+      <!-- Audio -->
+    if (item.SpAudio != null)
+    {
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Audio</div>
+            <div class="panel-body">
+                <p>...</p>
+            </div>
+            <!-- Table -->
+            <table class="table table-bordered  table-hover">
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpAudio.AudioCompression)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpAudio.AudioCompression)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpAudio.TwoWayAudio)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpAudio.TwoWayAudio)</td>
+                </tr>
+            </table>
+        </div>
+    }
+
+         <!-- General -->
+  if (item.SpGeneral != null)
+   {
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">General</div>
+            <div class="panel-body">
+                <p>...</p>
+            </div>
+
+            <!-- Table -->
+            <table class="table table-bordered  table-hover">
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpGeneral.PowerSupply)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpGeneral.PowerSupply)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpGeneral.PowerConsumption)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpGeneral.PowerConsumption)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpGeneral.OperatureTemperature)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpGeneral.OperatureTemperature)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpGeneral.IngressProtection)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpGeneral.IngressProtection)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpGeneral.Approvals)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpGeneral.Approvals)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpGeneral.ProductDimensions)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpGeneral.ProductDimensions)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpGeneral.ProductWeight)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpGeneral.ProductWeight)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpGeneral.Materials)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpGeneral.Materials)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpGeneral.Size)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpGeneral.Size)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.SpGeneral.Chasis)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.SpGeneral.Chasis)</td>
+                </tr>
+            </table>
+        </div>
+      }
+
+}
+   
+
+

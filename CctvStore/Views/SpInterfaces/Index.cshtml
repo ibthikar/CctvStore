@@ -1,0 +1,106 @@
+﻿@model IEnumerable<CctvStore.Models.SpInterface>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Specification.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ethernet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AudioIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlarmIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RS485)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BNCOutput)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResetButton)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EdgeStorage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Output)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PTZControl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Network)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HDMIVGA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Specification.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ethernet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AudioIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlarmIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RS485)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BNCOutput)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResetButton)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EdgeStorage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Output)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PTZControl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Network)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HDMIVGA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SpecificationId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SpecificationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SpecificationId })
+        </td>
+    </tr>
+}
+
+</table>

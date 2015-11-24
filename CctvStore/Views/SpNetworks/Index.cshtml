@@ -1,0 +1,88 @@
+﻿@model IEnumerable<CctvStore.Models.SpNetwork>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Specification.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetworkProtocols)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlarmTrigger)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RTSPVideo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Security)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WebLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SystemCompatibility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetworkInterface)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.POEInterface)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.POEMaxPower)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Specification.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NetworkProtocols)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlarmTrigger)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RTSPVideo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Security)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WebLanguage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SystemCompatibility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NetworkInterface)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.POEInterface)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.POEMaxPower)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SpecificationId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SpecificationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SpecificationId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,45 @@
+﻿
+@model IEnumerable<CctvStore.Models.ProductDownloads>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container prdDtlCntnr">
+    <div class="col-md-2 lftPrdLnkCvr">
+            <div class="row">
+                <h3 class="lPlnkH3">Products</h3>
+                <ul class="lftPrdMenu">
+                    <li><a href="#">Fisheye Camera</a></li>
+                    <li><a href="#">Network IR</a></li>
+                    <li><a href="#">Pinhole Camera</a></li>
+                    <li><a href="#">Box Camera</a></li>
+                    <li><a href="#">Analogue Bullet</a></li>
+                </ul>
+            </div>
+        </div>
+    <div class="col-md-10 ">
+        <div class="col-md-12 prdDtlCntright">
+            <div class="col-md-12 prdDlBtmBtnCvr">
+                <div class="col-md-3 prdDtlBtmBtns" style="text-align:center">@Html.ActionLink("Product Overview", "ProductDetails", "_cctvstore", new { ProductID = @ViewBag.ProductID }, null)</div>
+                <div class="col-md-3 prdDtlBtmBtns" style="text-align:center">@Html.ActionLink("Download", "ProductDownloads", "_cctvstore", new { ProductID = @ViewBag.ProductID }, null)</div>
+                <div class="col-md-3 prdDtlBtmBtns" style="text-align:center">@Html.ActionLink("Specification", "ProductSpecifications", "_cctvstore", new { ProductID = @ViewBag.ProductID }, null)</div>
+                <div class="col-md-3 prdDtlBtmBtns" style="text-align:center">@Html.ActionLink("Accessories", "ProductAccessories", "_cctvstore", new { ProductID = @ViewBag.ProductID }, null)</div>
+            </div>
+            <table class="table">
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FileName)
+                        </td>
+
+
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>
